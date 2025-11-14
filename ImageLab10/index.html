@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
   </head>
   <body>
+    <a-assets>
+      <img id="sky1" src="assets/Sky.jpg">
+      <img id="tex2" src="assets/AdobeStock_209684315.jpeg">
+      <img id="tex3" src="assets/texture3.jpg">
+      <img id="tex4" src="assets/cream.jpeg">
+    </a-assets>
+
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-cone src="#tex3" height="2" radius-bottom="0.8" radius-top="0.05" position="0 0 -4" rotation="180 0 0"></a-cone>
+      <a-sphere src="#tex4" radius="1" position="0 1.6 -4"></a-sphere>
+      <a-sphere src="#tex2" radius="0.9" position="0 3 -4"></a-sphere>
+      <a-sky src="#Sky"></a-sky>
     </a-scene>
   </body>
 </html>
