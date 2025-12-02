@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-assets>
+      <img id="scales" src="assets/scales.jpg">
+        <a-asset-item id="DragonModel" src="models/Dragon.obj"></a-asset-item>
+                <a-asset-item id="FlyDragonModel" src="models/FlyDrag.obj"></a-asset-item>
+        <a-asset-item id="FireModel" src="models/Drogon_fire.stl.obj"></a-asset-item>
+
+      <img id="tex6" src="assets/night.jpg">
+    </a-assets>
+
+    <a-scene>
+            <a-obj-model src="#DragonModel" color="pink" scale="0.5 0.5 0.5" position="-1 -5 2" rotation="-90 0 0"></a-obj-model>
+<a-obj-model 
+  src="#FlyDragonModel" color="black"  scale="0.01 0.01 0.01"  position="-100 -5 100"  rotation="-90 145 0" animation="property: rotation; from: -90 145 0; to: -70 145 0; dir: alternate; dur: 800; loop: true"
+></a-obj-model>
+            <a-obj-model src="#FireModel" color="red" scale="0.05 0.05 0.05" position="-4.5 -5 7.5"  rotation="-90 0 0"></a-obj-model>
+
+      <a-sky src="assets/night.jpg"></a-sky>
+      
+    </a-scene>
+  </body>
+</html>
